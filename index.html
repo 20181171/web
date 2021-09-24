@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Yerin's Site&#x2764;</title>
-</head>
+    <title>Welcome to Yerin's Site</title>
+    
+    <link rel="stylesheet" href="mystyle.css">
+</head> 
 <body>
     <header>
-        <h1>Yerin Home&#x2763;</h1>
+        <h1>yerin Home</h1>
     </header>
-    <nav>
-        <ul>
-            <li>About</li>
-            <li>Profile</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+    
     <nav>
         <ul>
             <li><a href="#">About</a></li>
@@ -28,13 +23,13 @@
     </nav>
     <section>
         <div id="profile">나의 사진<br>
-            <img src="./images/(1).jpg" alt="">
-            <h2>좋아하는 음악&#9835;</h2>
+            <img src="./images/bigdata.jpg" alt="">
+            <h2>좋아하는 음악</h2>
              <audio src="./media/music01.mp3" controls>
-            지원하지 않는 브라우저 입니다. 
-            </audio>
+                지원하지 않는 브라우저 입니다.</audio>
+      
             
-              <h2> 북극곰을 살려요~~</h2>
+              <h2 style="font-size: x-large; color: indigo;"> 북극곰을 살려요~~</h2>
             <video src="./media/movie.mp4" controls></video>
             <iframe width="827" height="465" src="https://www.youtube.com/embed/q2NEYjYHSNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -63,7 +58,7 @@
                 </tr>
             </table>
         </div>
-        <div id="portfolio">포트폴리오를 테이블로 표시</div>
+        <div id="portfolio">포트폴링를 테이블로 표시</div>
         <div id="contact">나의 주소와 이메일을 적음</div>
         <div id="link">
             <h2>즐겨찾는 사이트</h2>
@@ -74,6 +69,15 @@
 
         </div>
     </section>
+    <div id="login">
+        <form action="#" method="post"> 
+         아이디 : <input type="text" name="id" > <br>
+         비밀번호 : <input type="text" name="password"> <br>
+         <input type="submit" value="로그인">
+         <input type="reset" value="취소">  
+        </form>
+
+    </div>
     <footer>
         <div id="copyright">주소와 저작권</div>
         <div id="sns">트위터, 인스타그램, 페이스북주소</div>
