@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Hi, I'm Yerin!</title>
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+        <script src = "https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $('.trigger').on('click', function() {
+                    $('.modal-wrapper').toggleClass('open');
+                        $('.page-wrapper').toggleClass('blur-it');
+            return false;
+                    });
+            });
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100&family=Montserrat:wght@100&family=Nunito:wght@900&display=swap');
+            body {
+                background: #E0E6F8;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            h1{
+                padding-top: 30px;
+            }
+            h1, h3 {
+                font-family: 'IBM Plex Sans KR', sans-serif;
+                text-align: center;
+                clear: both;
+            }
+            b {
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                padding: 5px;
+                float: right;
+                color: black;
+            }
+            header {
+                padding-top: 30px;
+                padding-right: 90px;
+            }
+            img {
+                max-width: 900px;
+                margin-left: 280px;
+                width: 500px;
+            }
+            #hd1 {
+                font-weight: bolder;
+                padding-left: 80px;
+                padding-bottom: 5px;
+                font-family: 'Nunito', sans-serif;
+                font-size: xx-large;
+                float: left;
+            }
+            #hd2, .page-wrapper {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+            #hd2 a, a.btn {
+                position: relative;
+                padding: 6px 12px;
+            }
+            #hd2 a::after, a.btn::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0%;
+                height: 4px;
+                background: #f1c40f;
+                transition: all .5s ease-out;
+            }
+            #hd2 a:hover::after, a.btn:hover::after {
+                width: 100%;
+            }
+
+            #d3 {
+                float: left;
+                padding-top: 400px;
+                padding-left: 80px;
+            }
+
+            .icon-hover {
+                display: inline-block;
+                color: gray;
+                transition: all ease 0.5s
+            }
+
+            .icon-hover:hover {
+                color: #f1c40f;
+                transform: translate(0, -1vmin);
+            }
+
+            .blur-it {
+                filter: blur(4px);
+            }
+
+            a.btn {
+                width: 150px;
+                padding: 18px 0;
+                position: absolute;
+                top: 91.5%; 
+                left: 83%;
+                transform: translate(-50%, -50%);
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: black;
+                border-radius: 0;
+                background: #E0E6F8;
+            }
+
+
+            .modal-wrapper {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0; 
+                left: 0;
+                background: rgba(41, 171, 164, 0.8);
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.25s ease-in-out;
+            }
+
+            .modal-wrapper.open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .modal {
+                width: 600px;
+                height: 400px;
+                display: block;
+                margin: 50% 0 0 -300px;
+                position: relative;
+                top: 50%; 
+                left: 50%;
+                background: #fff;
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .modal-wrapper.open .modal {
+                margin-top: -200px;
+                opacity: 1;
+            }
+
+            .head { 
+                width: 90%;
+                height: 32px;
+                padding: 12px 30px;
+                overflow: hidden;
+                background: #e2525c;
+            }
+
+            .btn-close {
+                font-size: 28px;
+                display: block;
+                float: right;
+                color: #fff;
+            }
+
+            .content {
+                padding: 10%;
+            }
+
+            .good-job {
+                text-align: center;
+                font-family: 'IBM Plex Sans KR', sans-serif;
+                color: #e2525c;
+            }
+
+
+            p {
+                font-family: 'IBM Plex Sans KR', sans-serif;
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 30px;
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <div id = "hd1"><a href = "home.html" style = "text-decoration: none; color: #5882FA;">SEOYERIN</a></div>
+            <div id = "hd2">
+                <a href = "home.html"><b>Home</b></a>
+                <a href = "growth.html"><b>Growth</b></a>
+                <a href = "favorite.html"><b>Favorite</b></a>                
+            </div>
+        </header>
+     
+        <section>
+            <div id = "d1">
+                <h1 class="animate__animated animate__bounce">안녕하세요! 예린입니다.</h1>
+                <h3>저에 대해 같이 알아봐요 :)</h3>
+            </div>
+
+            <div id = "d3">
+                <a class="icon-hover" href = "https://www.instagram.com/18.42.30" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                <a class="icon-hover" href = "https://www.facebook.com/profile.php?id=100007598347316" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+                <a class="icon-hover" href = "https://m.blog.naver.com/v0v128" target="_blank"><i class="fab fa-blogger fa-3x"></i></a>
+            </div>
+
+ 
+
+            <div id = "d2">
+                <img src = "image\yerin.png">
+            </div>
+         
+            <div class="page-wrapper">
+                <a class="btn trigger" href="#">department</a>
+              </div>
+              
+              <div class="modal-wrapper">
+                <div class="modal">
+                  <div class="head">
+                    <a class="btn-close trigger" href="#">
+                      <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <div class="content">
+                      <div class="good-job">
+                        <p>
+                            동의대학교<br>
+                            경영정보학과<br>
+                            20181171<br>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+        </section>
+    </body>
+</html>

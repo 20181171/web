@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hi, I'm Yerin!</title>
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100&family=Montserrat:wght@100&family=Nunito:wght@900&display=swap');
+            body {
+                background: #E0E6F8;
+            }
+
+            header {
+                padding-top: 30px;
+                padding-right: 90px;
+                margin-right: 18px;
+            }
+
+            b {
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                padding: 5px;
+                float: right;
+                color: black;
+            }
+
+            #hd1 {
+                font-weight: bolder;
+                padding-left: 80px;
+                padding-bottom: 5px;
+                font-family: 'Nunito', sans-serif;
+                font-size: xx-large;
+                color: #5882FA;
+                float: left;
+            }
+
+            #hd2 {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+            #hd2 a {
+                position: relative;
+                padding: 6px 12px;
+            }
+            #hd2 a::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0%;
+                height: 4px;
+                background: #f1c40f;
+                transition: all .5s ease-out;
+            }
+            #hd2 a:hover::after {
+                width: 100%;
+            }
+
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-left: 9.5%;
+                
+            }
+
+            h3 {
+                text-align: center;
+                margin-left: 9%;
+                font-family: 'IBM Plex Sans KR', sans-serif;
+            }
+
+            span {
+                background: linear-gradient(to top, #FFE400 50%, transparent 50%);
+            }
+
+            .hover_effect_box, .hover_effect_box3 {
+                border: 2px solid #FFFFFF;
+                background-color: #FFFFFF;
+                width: 400px;
+                height: 400px;
+                margin-left: 18%;
+                margin-top: 5%;
+                box-shadow: 1px 1px 10px 1px #A4A4A4;
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+                cursor: default;
+                background: #fff;
+                box-sizing: initial;
+                float: left;
+            }
+
+            .hover_effect_box2, .hover_effect_box4 {
+                border: 2px solid #FFFFFF;
+                background-color: #FFFFFF;
+                width: 400px;
+                height: 400px;
+                margin-right: 18%;
+                margin-top: 5%;
+                box-shadow: 1px 1px 10px 1px #A4A4A4;
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+                cursor: default;
+                background: #fff;
+                box-sizing: initial;
+                float: right;
+            }
+
+            .hover_effect_box, .hover_effect_box2, .hover_effect_box3, .hover_effect_box4 * {
+                box-sizing: initial;
+            }
+
+            .hover_effect_box .caption, .hover_effect_box2 .caption, .hover_effect_box3 .caption, .hover_effect_box4 .caption {
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+            }
+
+            .hover_effect_box .content_bg, .hover_effect_box2 .content_bg, .hover_effect_box3 .content_bg, .hover_effect_box4 .content_bg {
+                display: block;
+                position: relative;
+            }
+            
+            .hover_effect_box .caption_title, .hover_effect_box2 .caption_title, .hover_effect_box3 .caption_title, .hover_effect_box4 .caption_title {
+                text-transform: uppercase;
+                color: #fff;
+                text-align: center;
+                position: relative;
+                font-size: 17px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.8);
+                margin: 20px 0 0 0;
+            }
+            
+            .hover_effect_box .caption_desc, .hover_effect_box2 .caption_desc, .hover_effect_box3 .caption_desc, .hover_effect_box4 .caption_desc {
+                font-size: 0.9em;
+                line-height: 1.5;
+                position: relative;
+                color: #fff;
+                padding: 30px 20px 40px;
+                text-align: center;
+            }       
+            
+            .hover_effect_1 .content_bg {
+                transition: all 0.2s linear;
+            }
+
+            .hover_effect_3 .content_bg {
+            transition: all 0.4s ease-in-out 0.5s;
+            }
+ 
+            .hover_effect_3 .caption {
+                background-color: rgba(0,0,0,0.8);
+                filter: alpha(opacity=0);
+                opacity: 0;
+                transition: all 0.3s ease-in 0.4s;
+            }
+ 
+            .hover_effect_3 .caption_title {
+                filter: alpha(opacity=0);
+                opacity: 0;
+                border-bottom: 1px solid white;
+                background: transparent;
+                margin: 20px 40px 0px 40px;
+                transform: scale(10);
+                transition: all 0.3s ease-in-out 0.1s;
+            }
+
+            .hover_effect_3 .caption_desc {
+                filter: alpha(opacity=0);
+                opacity: 0;
+                transform: scale(10);
+                transition: all 0.3s ease-in-out 0.2s;
+                padding: 20px 20px 30px;
+            }
+
+    
+ 
+            .hover_effect_3:hover .caption {
+                filter: alpha(opacity=100);
+                opacity: 1;
+                transition-delay: 0s;
+            }
+ 
+            .hover_effect_3:hover .content_bg {
+                transition-delay: 0s;
+            }
+ 
+            .hover_effect_3:hover .caption_title {
+                filter: alpha(opacity=100);
+                opacity: 1;
+                transform: scale(1);
+                transition-delay: 0.1s;
+            }
+
+                .hover_effect_3:hover .caption_desc {
+                filter: alpha(opacity=100);
+                opacity: 1;
+                transform: scale(1);
+                transition-delay: 0.2s;
+            }
+ 
+            .caption {
+                font-family: 'IBM Plex Sans KR', sans-serif;
+                padding-top: 25%;
+            }
+
+            img {
+                width: 350px;
+                height: 350px;
+                padding: 24px;
+            }
+
+            iframe {
+                padding: 24px;
+            }
+
+            footer {
+                clear: both;
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                padding: 50px 37% 50px 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id = "hd1"><a href = "home.html" style = "text-decoration: none; color: #5882FA;">SEOYERIN</a></div>
+            <div id = "hd2">
+                <a href = "home.html"><b>Home</b></a>
+                <a href = "growth.html"><b>Growth</b></a>
+                <a href = "hobby.html"><b>Favorite</b></a>                
+            </div>
+
+            <div class = "i1">
+                <h1><span>I iove it</span> <i class="fas fa-heart" style="color: #FE2E64;"></i></h1>
+                <h3>사진과 영상에 마우스를 올려보세요 :)</h3>
+            </div>    
+        </header>
+
+        <section>
+        <div class="hover_effect_box hover_effect_3">
+            <div class="content_bg">
+            <img src = "image/favor1.jpg">
+        </div>
+        <div class="caption">
+            <div class="caption_title">컬러링북</div>
+            <div class="caption_desc">
+                코로나로 인해 집에 있는 시간이 많아졌고 <br>
+                혼자서 할 수 있는 취미가 무엇인지 찾아보았다.<br>
+                유튜브를 보다가 알게 된 색칠하기는<br>
+                색을 입히면서 마음이 차분해지고<br>
+                잡생각이 사라져서 심리 치료 효과를 받았다. 
+            </div>
+          </div>
+        </div>
+
+        <div class="hover_effect_box2 hover_effect_3">
+            <div class="content_bg">
+              <iframe width="350px" height="350px" src="https://www.youtube.com/embed/t70t-sklypk?autoplay=1&amp;mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="caption">
+            <div class="caption_title">홈트레이닝</div>
+            <div class="caption_desc">
+                운동은 체중 감량을 목적으로 초6 때 줄넘기를 시작했다.<br>
+                그때부터 신체적 건강을 신경 쓰기 시작했고,<br>
+                추후 집에서 운동을 했다.<br>
+                요즘도 영상을 보면서 운동 자세를 배우고 따라 하고 있다.
+            </div>
+          </div>
+        </div>
+
+        <div class="hover_effect_box3 hover_effect_3">
+            <div class="content_bg">
+            <img src = "image/favor4.jpg">
+        </div>
+        <div class="caption">
+            <div class="caption_title">dance</div>
+            <div class="caption_desc">
+                중학생 때 친구들과 커버댄스를 추기 시작했다. <br>
+                잘 추든 못 추든 친구들과 함께 움직이는 것이 즐거웠다.<br>
+                그 기억이 좋아서 고등학생 때 댄스부를 들어가게 되었고<br>
+                수상까지 한 경험이 있다. 
+            </div>
+          </div>
+        </div>
+
+        <div class="hover_effect_box4 hover_effect_3">
+            <div class="content_bg">
+            <img src = "image/favor3.jpg">
+        </div>
+        <div class="caption">
+            <div class="caption_title">cook</div>
+            <div class="caption_desc">
+                한식을 주로 먹지만,<br>
+                간혹 느끼한 음식이 당길 때<br>
+                파스타를 해먹는 편이다.<br>
+                수제비, 덮밥 등 내가 좋아하는 음식을<br>
+                만드는 것을 좋아한다.
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer>
+        <b><span>Thank you, for watching my page!</span><b>
+    </footer>
+    </body>
+</html>
