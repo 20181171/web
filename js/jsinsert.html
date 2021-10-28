@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.자바스크립트 위치(삽입)
+        //내부 js : script 태그와/ script 태그 사이에 필요한 자바스크립트
+        //외부 js : 소스 파일을 별도의 파일로 저장(*.js)
+        //인라인 js : html 태그 내부에 삽입 */
+
+        //2. 출력하는 방법
+        //. console.log로 출력
+         //. HTML element에 삽입 (.innerHTML)
+         //. HTML output (document.write())
+        // - alert로 출력 (window.alert())
+
+        function myFun(){
+            document.bgColor="yellow"
+            document.getElementById("demo").innerHTML = "자바스크립트";
+        }
+        //3. 대화상자
+        //-alert(메시지): 메시지 상자
+        //-confirm(메시지) : 확인 상자
+        //-prompt(메시지,기본값) : 입력 상자
+
+        var x, y, input;
+        input = prompt("점수를 입력", 0); //문자열 입력
+        x = parseInt(input); //정수로 변환
+        input = prompt("점수를 입력", 0); //문자열 입력
+       y = parseInt(input);
+       alert("합="+ (x+y));
+       console.log(x+y);
+       console.log(x*y);
+       console.log(x/y);
+    </script>
+   
+</head>
+<body>
+  <div id="demo">여기에 출력</div>
+  <script>
+    document.write("안녕하세요~~ 서예린입니다");;
+     document.bgColor="darkgray";
+ </script>
+
+ 
+ <br>
+ <button onclick="myFun();">Try it</button>
+ <button onclick="alert('저는 서예린입니다~~~')">alert()</button>
+</body>
+</html>

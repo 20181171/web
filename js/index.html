@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Yerin's Site</title>
+    
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="./css/w3.css">
+    <style>
+        section{
+            display: flex ;
+        }
+        .main{
+            flex: 4;
+        }
+        .right{
+            flex: 1;
+        }
+    
+    </style>
+</head> 
+<body>
+    <header>
+        <h1 class="w3-text-indigo w3-xxlarge">yerin Home</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#profile">profile</a></li>
+            <li><a href="portfolio">portfolio</a></li>
+            <li><a href="contact">contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article class="main">
+        <div id="profile">나의 사진<br>
+            <img src="./images/bigdata.jpg" class="w3-circle" alt="Alps">
+            <h2>좋아하는 음악</h2>
+             <audio src="./media/music01.mp3" controls>
+                지원하지 않는 브라우저 입니다.</audio>
+              <h2 style="font-size: x-large; color: indigo;"> 북극곰을 살려요~~</h2>
+            <video src="./media/movie.mp4" controls></video>
+            <iframe width="827" height="465" src="https://www.youtube.com/embed/q2NEYjYHSNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <hr>
+            <h2> My Profile</h2> 
+            <table class="w3-table-all w3-hoverable">
+                <tr class="w3-indigo">
+                    <th>년도</th>
+                    <th>내용</th>
+                    <th>비고</th>
+                </tr>
+                <tr>
+                    <td>현재</td>
+                    <td>동의대학교 경영정보학과</td>
+                    <td>재학</td>
+                </tr>
+                <tr>
+                    <td>현재</td>
+                    <td>봉사활동</td>
+                    <td>1년</td>
+                </tr>
+                <tr>
+                    <td>내용01</td>
+                    <td>내용02</td>
+                    <td>내용03</td>
+                </tr>
+            </table>
+        </div>
+        <div id="portfolio">포트폴리오를 테이블로 표시</div>
+        <div id="contact">나의 주소와 이메일을 적음</div>
+    </article>
+      <aside class="right">
+            <div id="link">
+            <h2>즐겨찾는 사이트</h2>
+            <a href="http://www.deu.ac.kr" target="_blank">동의대학교</a><br>
+            <a href="http://www.google.com">구글</a><br>
+            <a href="./start.html">연습문서</a><br>
+            <a href="#profile">나의 프로필</a>
+        </div>
+    <div id="login">
+        <form class="w3-container" action="#" method="post"> 
+         아이디 : <input class="w3-input w3-border w3-light-grey" type="text" name="id"> <br>
+         비밀번호 : <input class="w3-input w3-border w3-light-grey" type="text" name="password" > <br>
+         <input class="w3-btn w3-blue-grey" type="submit" value="로그인">
+         <input class="w3-btn w3-blue-grey" type="reset" value="취소">  
+              </form>
+               </div>
+               </aside>
+               </section>
+  <footer>
+        <div id="copyright">주소와 저작권</div>
+        <div id="sns">트위터, 인스타그램, 페이스북주소</div>
+    </footer>
+</body>
+</html>
