@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #cart, #list{
+            display: flex;
+        }
+        #p1, #p2, #p3{
+            flex : 3;
+        }
+    </style>
     <script>
         function listyle(){
          document.getElementById("s").style.backgroundColor="red"
@@ -12,17 +20,74 @@
          for(let i=0; i < x.length; i++)
          x[i].style.color = "blue";
         }
+        function funAppend(){
+            const l = document.createElement("li");
+            const val = document.getElementById("text").value; 
+            const node = document.createTextNode(val); 
+            l.appendChild(node);
+            const ele = document.getElementById("ol1");
+            ele.appendChild(l); 
+        }
+        function cartAppend(e){
+            const product = document.getElementById(e);
+            const element = document.getElementById("cart"); //문자
+            element.appendChild(product);
+        }
+       function cartRemove(e){
+        const product = document.getElementById(e);
+        const element = document.getElementById("cart");
+        const list = document.getElementById("list"); 
+        element.removeChild(product);
+        list.appendChild(product);
+       }
     </script>
 </head>
-<body onload="listyle();">
+<body>
     <h3 id ="s">겨울방학 이벤트</h3>
-    <ol id="list">
+    <ol id="ol1">
         <li>제주도 여행</li>
         <li>프로그래밍 공부</li>
         <li>토익점수 200점 올리기</li>
         <li>사진 배우기</li>
     </ol>
+    <input type="text" name="" id="text" maxlength="40">
+    <button onclick="listyle();">스타일</button>
+    <button onclick="funAppend();">추가</button>
+    <br>
+    <!--
     <img src="./images/photo4.jpg"> <br>
     <button onclick="window.close();"> 닫기 </button>
+    -->
+    <h3> 장바구니 </h3>
+    <div id="cart" style="width: 700px; height: 250px; border: 1px solid gray;">
+        
+    </div>
+    <br>
+    <h3>상품리스트</h3>
+    <div id="list" style="width: 700px; height: 250px; border: 1px solid gray;">
+      <div id="p1">
+        <img src="./images/product01.jpg" alt="" style="width: 150px; height: 100px;">
+        <div>
+           <p>가격:1500000원/품명:노트북</p>
+           <button onclick="cartAppend('p1');">추가</button>
+           <button onclick="cartRemove('p1');">취소</button> 
+        </div>
+      </div>
+      <div id="p2">
+        <img src="./images/product02.jpg" alt="" style="width: 150px; height: 100px;">
+        <div>
+           <p>가격:500000원/품명:컴퓨터</p>
+           <button onclick="cartAppend('p2');">추가</button>
+           <button onclick="cartRemove('p2');">취소</button> 
+        </div>
+    </div>
+    <div id="p3">
+        <img src="./images/product03.jpg" alt="" style="width: 150px; height: 100px;">
+        <div>
+           <p>가격:20000원/품명:옷</p>
+           <button onclick="cartAppend('p3');">추가</button>
+           <button onclick="cartRemove('p3');">취소</button> 
+        </div>
+       
 </body>
 </html>

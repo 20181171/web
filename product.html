@@ -70,7 +70,7 @@
             let text="";
             text = `<table class="w3-table-all w3-hoverable"><tr class="w3-indigo"><th> 작가명</th> <th> 작품 </th> <th> 가격 </th></tr>`;
             for(let i=0; i < data.length; i++){
-                 text += `<tr><td>${data[i][0]}</td><td><img src=${data[i][1]}></td><td>${data[i][2]}</td></tr>`;
+                 text += `<tr><td>${data[i][0]}</td><td><img src=${data[i][1]} onClick="imageClick(this);"></td><td>${data[i][2]}</td></tr>`;
             }
             text += '</table>'; 
             document.getElementById("productList").innerHTML = text ;
@@ -90,10 +90,14 @@
              //window.open("팝업소스파일","별명", "스타일설정") 
              window.open("week11.html","event", "width=500, height=500, scrollbars=yes")
          }
+         function imageClick(e){
+           document.getElementById("img01").src = e.src;
+           document.getElementById("modal01").style.display="block";
+         }
     </script>
 </head>
 
-<body onload="productList(); popup() ;"> 
+<body onload="productList(); "> 
     <header>
         <!-- Sidebar -->
         <div class="w3-sidebar w3-bar-block	w3-border-right" style="display:none" id="mySidebar">
@@ -134,7 +138,11 @@
       </div>
     
     </section>
-
+ <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <div class="w3-modal-content w3-animate-zoom">
+              <img id="img01" style="width:100%;">
+            </div>
+        </div>
 </body>
 
 </html>
