@@ -1,6 +1,6 @@
 /*하나의 특별한 작업을 수행하도록 설계 */
 alert(add(90,120)); //호이스팅이 돼서 선언 전에 콜 가능
-alert(m(80.10)); 
+alert(m(80,10)); 
 
 function add(v1, v2){ //named function
     return v1+v2;
