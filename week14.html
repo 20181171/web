@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20181171 서예린(drag & drop)</title>
+    <style>
+        #cart, #list {
+        width: 500px;
+        height: 150px;
+        border: 1px solid #aaa;
+        display: flex;
+        }
+
+    </style>
+     <script>
+         function allowDrop(e){
+             e.preventDefault();
+         }
+         function drag(e){
+             e.dataTransfer.setData("text", e.target.id); //움직이는 이벤트 타겟의 아이디는 img1이다
+         }                                               //해당 id는 text를 받음
+     function drop(e){
+         e.preventDefault(); //이벤트 초기화
+         let data = e.dataTransfer.getData("text"); //위 드래그를 text 안에 넣기
+         e.target.appendChild(document.getElementById(data)); //드롭하면 설정했던 거 불러오기
+     }
+     </script>
+</head>
+<body>
+    <div id="cart" ondrop="drop(event);" ondragover="allowDrop(event);">
+        
+    </div>
+    <div id="list" ondrop="drop(event);" ondragover="allowDrop(event);">
+        <img id="img1" src="./images/product01.jpg" draggable="true" ondragstart="drag(event);" width="120px" height="75px" >
+        <img id="img2" src="./images/product02.jpg" draggable="true" ondragstart="drag(event);" width="120px" height="75px" >
+        <img id="img3" src="./images/product03.jpg" draggable="true" ondragstart="drag(event);" width="120px" height="75px" >
+    </div>
+  
+</body>
+</html>
