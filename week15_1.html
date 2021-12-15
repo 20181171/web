@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data=[['2021년 9월', '작은도서관 봉사', '책읽어주기'], //2차원배열
+        ['2021년 10월', '진구청 어르신 돌봄', '-'],
+        ['2021년 11월', '학교 도서관', '도서정리']]
+     function print(){ //외부로부터 변수 받아오는게 없음
+       let tex = '';
+       text = `<table border='1' width="50%">`; 
+       for(i=0; i<data.length; i++){
+        text += `<tr><td>${data[i][0]}</td><td>${data[i][1]}</td><td>${data[i][2]}</td></tr>`;
+       }
+       text += `</table>`;
+        document.getElementById("demo").innerHTML = text;
+     }
+     function action(){
+      let a = new Array();
+      a[0] = document.getElementById('date').value;
+      a[1] = document.getElementById('position').value;
+      a[2] = document.getElementById('content').value;
+      data.push(a);
+     }
+    </script>
+</head>
+<body>
+   <div id="demo">
+
+   </div>
+   <div>
+       일자: <input type="text" name="" id="date" onfocus="this.style.background='yellow'" onblur="this.style.background='white'"><br>
+       장소:<input type="text" name="" id="position" onfocus="this.style.background='yellow'" onblur="this.style.background='white'"><br>
+       내용:<input type="text" name="" id="content" onfocus="this.style.background='yellow'" onblur="this.style.background='white'"><br>
+   </div>
+   <button onclick="print();">누르세요</button>
+   <button onclick="action();">대외활동 추가</button>
+</body>
+</html>
